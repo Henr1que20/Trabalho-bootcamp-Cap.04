@@ -11,7 +11,7 @@ public class Review implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String tesxt;
+    private String text;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -24,9 +24,9 @@ public class Review implements Serializable {
     public Review() {
     }
 
-    public Review(Long id, String tesxt, User user, Movie movie) {
+    public Review(Long id, String text, User user, Movie movie) {
         this.id = id;
-        this.tesxt = tesxt;
+        this.text = text;
         this.user = user;
         this.movie = movie;
     }
@@ -39,12 +39,12 @@ public class Review implements Serializable {
         this.id = id;
     }
 
-    public String getTesxt() {
-        return tesxt;
+    public String getText() {
+        return text;
     }
 
-    public void setTesxt(String tesxt) {
-        this.tesxt = tesxt;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public User getUser() {
